@@ -1,10 +1,12 @@
 {
-  "name": "makeMeMonster",
+  "name": "make-me-monster",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha tests/*.spec.js --require @babel/register",
+    "start": "node .",
+    "dev": "./node_modules/.bin/nodemon ."
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "@babel/register": "^7.4.4",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "helmet": "^3.16.0",
     "morgan": "^1.9.1"
