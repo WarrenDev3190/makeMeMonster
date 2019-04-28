@@ -6,7 +6,8 @@ describe("MakeMeMonster Module", () => {
     id: "12345",
     attack: 123,
     defense: 234,
-    level: 345
+    level: 345,
+    healthPoints: 250
   };
   it("can return the index of a random monster", () => {
     expect(MakeMeMonster.getRandomMonsterIndex()).to.be.lte(

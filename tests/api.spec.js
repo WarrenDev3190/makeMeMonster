@@ -16,7 +16,8 @@ describe("MakeMeMonster API", () => {
           id: "12345",
           attack: 100,
           defense: 122,
-          level: 50
+          level: 50,
+          healthPoints: 250
         }
       })
       .expect(res => {
@@ -41,32 +42,10 @@ describe("MakeMeMonster API", () => {
         player: {
           attack: "100",
           defense: 122,
-          level: 50
+          level: 50,
+          healthPoints: 250
         }
       })
       .expect(400, done);
-  });
-  it("let's players battle monsters using PUT /api/battle/:playerId", done => {
-    done();
-    // let testPlayer = {
-    //   id: "12345",
-    //   attack: 100,
-    //   defense: 122,
-    //   level: 50
-    // };
-    // testAppInstance
-    //   .post("/api/battle")
-    //   .send({
-    //     player: testPlayer
-    //   })
-    //   .expect(res => {
-    //     let testMonster = res.body;
-    //     testAppInstance
-    //       .put(`/api/battle/${testPlayer.id}`)
-    //       .expect(updateResp => {
-    //         expect(updateResp.body).to.have.keys(["player", "monster"]);
-    //       })
-    //       .expect(200, done);
-    //   });
   });
 });
